@@ -1,8 +1,14 @@
 
-struct Item {
-	int valor;
+typedef struct {
 	int peso;
-};
+}Gene;
+
+typedef struct {
+	int valor[8]; 
+	Gene *genes;
+}Cromossomo;
+
+
 
 void iniciarPopulacao(int);
 void crossover();

@@ -6,24 +6,21 @@
 void troca(int*,int*);
 
 int main(int arg, char* args[]){
-	struct Item *a;
+	Cromossomo *a;
 	int i;
-	a = malloc(100 * sizeof(struct Item));
+	
+	a = malloc(sizeof(Cromossomo));
+	a->genes = malloc(8 * sizeof(Gene));
 
-	for (i = 0; i< 100; i++ ){
-		a[i].valor = i;
+	
+	for(i = 0;i < 8; i++){
+		a->valor[i] = i;
+	}
+	
+	for(i = 0;i < 8; i++){
+		printf("Valor: %d\n",a->valor[i]);
 	}
 
-	for (i = 0; i < 100; i++ ){
-		printf("Valor: %d\n", a[i].valor );
-	}
+
 	return 0;
-}
-
-void troca (int *p, int *q){
-	int temp;
-
-	temp = *p;
-	*p = *q;
-	*q = temp;
 }
