@@ -1,8 +1,8 @@
-CC=g++
+CC=gcc
 CFLAGS=-c -Wall
 LDFLAGS=
-SOURCES=main.cpp algoritimogenetico.cpp algoritimogenetico.h
-OBJECTS=$(SOURCES:.cpp=.o)
+SOURCES=main.c algoritimogenetico.c algoritimogenetico.h
+OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=main
 
 all: $(SOURCES) $(EXECUTABLE)
